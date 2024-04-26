@@ -1,6 +1,6 @@
 # olfactionGLM
 
-This is the repository for the code used to fit GLM models in the paper LINK
+This is the repository for the MATLAB code used to fit GLM models in the paper LINK
 
 ## Acknowledgements 
 The code is an adaptation of the [neuroGLM](https://github.com/pillowlab/neuroGLM) framework, for regressing trial-based spike train data using a Generalized Linear Model (GLM), introduced by [Park et al., 2014](https://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html).
@@ -11,6 +11,9 @@ The cross-validation procedure for model selection is inspired by [Hardcastle et
 
 ## General
 We provide a file piriformData.mat that contains data for 182 trials performed by an animal expert in the task. The data consists of the 10-ms time-binned spike count activity for 12 neurons, along with all the other covariates recorded during the task. These covariates (and their labels) are: Position in virtual corridor (X), Odorant stimulation (O), Licking response (L), Inhalation onset (I), Reward consumption (R), Pre-GO time window (G) and Contextual modulation of odor response (M).
+
+## Reference
+Paper citation LINK
 
 ## Instructions 
 
