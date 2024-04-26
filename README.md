@@ -3,8 +3,10 @@
 This is the repository for the code used to fit GLM models in the paper LINK
 
 ## Acknowledgements 
-The code is an adaptation of the [neuroGLM](https://github.com/pillowlab/neuroGLM) framework, for regressing trial-based spike train data using a Generalized Linear Model (GLM), introduced by [Park et al., 2014](https://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html)
+The code is an adaptation of the [neuroGLM](https://github.com/pillowlab/neuroGLM) framework, for regressing trial-based spike train data using a Generalized Linear Model (GLM), introduced by [Park et al., 2014](https://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html).
+
 It also makes use of tools from the [NCCLABCODE](https://github.com/pillowlab/DRD/tree/ddb2683d95fa4887156204ff472028ddd1dbb44b/ncclabcode) repository.
+
 The cross-validation procedure for model selection is inspired by [Hardcastle et al., 2017](https://www.cell.com/neuron/fulltext/S0896-6273(17)30237-4) (implemented in [ln-model-of-mec-neurons](https://github.com/GiocomoLab/ln-model-of-mec-neurons))
 
 ## General
