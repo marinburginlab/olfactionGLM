@@ -1,71 +1,47 @@
-# olfactionInContextGLM
+# olfactionGLM
 
-1 - Create data file for GLM:
+This is the repository for the code used to fit GLM models in the paper LINK
 
-```
+## Acknowledgements 
+The code is an adaptation of the [neuroGLM](https://github.com/pillowlab/neuroGLM) framework, for regressing trial-based spike train data using a Generalized Linear Model (GLM), introduced by [Park et al., 2014](https://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html)
+It also makes use of tools from the [NCCLABCODE](https://github.com/pillowlab/DRD/tree/ddb2683d95fa4887156204ff472028ddd1dbb44b/ncclabcode) repository.
+The cross-validation procedure for model selection is inspired by [Hardcastle et al., 2017](https://www.cell.com/neuron/fulltext/S0896-6273(17)30237-4) (implemented in [ln-model-of-mec-neurons](https://github.com/GiocomoLab/ln-model-of-mec-neurons))
 
-% Indicar fn, que es el archivo ExperimentData, por ejemplo:
-fn='/media/Data/SmartboxRecording_L3_20210910-184935_ExperimentData.mat';
+## General
+We provide a file piriformData.mat that contains data for 182 trials performed by an animal expert in the task. The data consists of the 10-ms time-binned spike count activity for 12 neurons, along with all the other covariates recorded during the task. These covariates (and their labels) are: Position in virtual corridor (X), Odorant stimulation (O), Licking response (L), Inhalation onset (I), Reward consumption (R), Pre-GO time window (G) and Contextual modulation of odor response (M).
 
-% Elegir fnRaw, que es el nombre del archivo donde se exporta los datos en formato GLM, por ejemplo:
-fnRaw='/media/Data/glmFits/glmDataL3_20210910-184935.mat';
+## Instructions 
 
-% Correr:
-rawDataForGLM(fn,fnRaw)
-
-```
-
-
-
-2 - Fit GLM to data:
+1 - Fit GLM to data:
 
 ```
 
-% Ajustar todos los modelos a la lista neuronsToFit de neuronas a analizar
-
+% Let's use run the model selection and fitting procedure to the  and try to fit all models Ajustar todos los modelos a la lista neuronsToFit de neuronas a analizar
+fn='piriformData.mat'; % Indicate file name with data
 neuronsToFit=1:10; % e.g, fit 10 first neurons
-fitModel='all';
-fitGLM_lab(fnRaw,neuronsToFit,fitModel)
-% FOR THIS fnRaw, RESULTS WILL BE SAVED IN /media/Data/glmFits/glmDataL3_20210910-184935_modelFit/
+fitModel='all'; % Indicate if a specific model is desired (eg., for a position model indicate 'X'), otherwise indicate 'all' to run thorugh the model selection procedure.
+fitGLM_lab(fn,neuronsToFit,fitModel)
+% FOR THIS fn, RESULTS FOR EACH NEURON WILL BE SAVED IN THE piriformData_modelFit/ FOLDER
 
 ```
 
-
-
-3 - Estimate the contribution of each variable to the fitted model
+2 - Estimate the contribution of each variable to the fitted model
 
 ```
-
-% Indicar fnBase, el nombre base de los archivos ajustados, en este ejemplo:
-fnBase = '/media/Data/glmFits/glmDataL3_20210910-184935_modelFit/fit_Neuron';
-
-% Calculamos las contribuciones
+fnBase = 'piriformData_modelFit/fit_Neuron'; % Indicate basename for neuron fit files
 neuronsToFit=8; % e.g, calculate contribution of neuron 8
 parameterContribution(fnBase,neuronsToFit)
 
 ```
 
-
-
-4 - Remove variables with negative contributions and refit model:
+3 - Plot kernels obtained:
 
 ```
 
-% Correr:
-checkAndCorrectModels(fnBase)
-
-```
-
-
-
-5 - Plot kernels obtained:
-
-```
-
-% Indicar neurona a graficar:
-fnNeuronFit='/media/Data/Dropbox-labo/Dropbox/seba/Datos/Datos in vivo/glmFits/glmDataL3_20210910-184935_modelFit/fit_Neuron01_XOLIRSM.mat';
-includeHP=1; % PARA INCLUIR HISTORY AND POP
-plotFlag=[1 0]; % [1 0] significa agrupar variables (ej., olor 1 y olor 2) en un mismo grafico , [1 1] significa no agrupar
+% Indicate neuron fit file to plot:
+fnNeuronFit='piriformData_modelFit/fit_Neuron/fit_Neuron01_OLISM.mat'; % For neuron 1 of this dataset, the model selected is the model containing OLISM variables
+includeHP=0; % Do not include history or population-coupling kernels
+plotFlag=[1 0]; % 
 wKern=getKernels(fnNeuronFit,includeHP,plotFlag);
 
 ```
