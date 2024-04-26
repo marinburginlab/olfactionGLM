@@ -18,7 +18,7 @@ We provide a file piriformData.mat that contains data for 182 trials performed b
 
 ```
 
-% Let's use run the model selection and fitting procedure to the  and try to fit all models Ajustar todos los modelos a la lista neuronsToFit de neuronas a analizar
+% Let's use run the model selection and fitting procedure
 fn='piriformData.mat'; % Indicate file name with data
 neuronsToFit=1:10; % e.g, fit 10 first neurons
 fitModel='all'; % Indicate if a specific model is desired (eg., for a position model indicate 'X'), otherwise indicate 'all' to run thorugh the model selection procedure.
