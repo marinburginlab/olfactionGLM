@@ -22,18 +22,18 @@ Paper citation LINK
 ```
 
 % Let's use run the model selection and fitting procedure
-fn='test dataset/piriformData.mat'; % Indicate file name with data
+fn='piriformData.mat'; % Indicate file name with data
 neuronsToFit=1:10; % e.g, fit 10 first neurons
 fitModel='all'; % Indicate if a specific model is desired (eg., for a position model indicate 'X'), otherwise indicate 'all' to run thorugh the model selection procedure.
 fitGLM_lab(fn,neuronsToFit,fitModel)
-% FOR THIS fn, RESULTS FOR EACH NEURON WILL BE SAVED IN THE test dataset/piriformData_modelFit/ FOLDER
+% FOR THIS fn, RESULTS FOR EACH NEURON WILL BE SAVED IN THE "piriformData_modelFit/" FOLDER
 
 ```
 
 2 - Estimate the contribution of each variable to the fitted model
 
 ```
-fnBase = 'test dataset/piriformData_modelFit/fit_Neuron'; % Indicate basename for neuron fit files
+fnBase = 'piriformData_modelFit/fit_Neuron'; % Indicate basename for neuron fit files
 neuronsToFit=8; % e.g, calculate contribution of neuron 8
 parameterContribution(fnBase,neuronsToFit)
 
@@ -44,7 +44,7 @@ parameterContribution(fnBase,neuronsToFit)
 ```
 
 % Indicate neuron fit file to plot:
-fnNeuronFit='test dataset/piriformData_modelFit/fit_Neuron/fit_Neuron01_OLISM.mat'; % For neuron 1 of this dataset, the model selected is the model containing OLISM variables
+fnNeuronFit='piriformData_modelFit/fit_Neuron/fit_Neuron01_OLISM.mat'; % For neuron 1 of this dataset, the model selected is the model containing OLISM variables
 includeHP=0; % Do not include history or population-coupling kernels
 plotFlag=[1 0]; % 
 wKern=getKernels(fnNeuronFit,includeHP,plotFlag);
