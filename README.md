@@ -10,7 +10,7 @@ It also makes use of tools from the [NCCLABCODE](https://github.com/pillowlab/DR
 The cross-validation procedure for model selection is inspired by [Hardcastle et al., 2017](https://www.cell.com/neuron/fulltext/S0896-6273(17)30237-4) (implemented in [ln-model-of-mec-neurons](https://github.com/GiocomoLab/ln-model-of-mec-neurons))
 
 ## General
-We provide a file piriformData.mat that contains data for 182 trials performed by an animal expert in the task. The data consists of the 10-ms time-binned spike count activity for 12 neurons, along with all the other covariates recorded during the task. These covariates (and their labels) are: Position in virtual corridor (X), Odorant stimulation (O), Licking response (L), Inhalation onset (I), Reward consumption (R), Pre-GO time window (G) and Contextual modulation of odor response (M).
+To test the code, we provide the file piriformData.mat that can be downloaded from [this link](https://figshare.com/articles/dataset/piriformData_mat/25944577). The file piriformData.mat contains data for 182 trials performed by an animal expert in the task. The data consists of the 10-ms time-binned spike count activity for 12 neurons, along with all the other covariates recorded during the task. These covariates (and their labels) are: Position in virtual corridor (X), Odorant stimulation (O), Licking response (L), Inhalation onset (I), Reward consumption (R), Pre-GO time window (G) and Contextual modulation of odor response (M).
 
 ## Reference
 Paper citation LINK
