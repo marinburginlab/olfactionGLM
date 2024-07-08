@@ -1,6 +1,6 @@
 # olfactionGLM
 
-This is the repository for the MATLAB code used to fit GLM models in the paper LINK
+This is the repository for the MATLAB code used to fit GLM models in the paper by [Federman et al., 2024](https://www.nature.com/articles/s41467-024-49897-4).
 
 ## Acknowledgements 
 The code is an adaptation of the [neuroGLM](https://github.com/pillowlab/neuroGLM) framework, for regressing trial-based spike train data using a Generalized Linear Model (GLM), introduced by [Park et al., 2014](https://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html).
@@ -50,3 +50,7 @@ plotFlag=[1 0]; %
 wKern=getKernels(fnNeuronFit,includeHP,plotFlag);
 
 ```
+
+## REFERENCE
+
+Federman N., Romano S.A., Amigo-Duran M., Salomon L. & Marin-Burgin A (2024). [Acquisition of non-olfactory encoding improves odour discrimination in olfactory cortex.](https://www.nature.com/articles/s41467-024-49897-4) Nat Commun 15, 5572. https://doi.org/10.1038/s41467-024-49897-4 
