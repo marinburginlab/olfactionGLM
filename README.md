@@ -14,7 +14,7 @@ To test the code, we provide the file piriformData.mat that can be downloaded fr
 
 ## Reference
 If you use this repository in your work, please cite:
-* Federman, N., Romano, S.A., Amigo-Duran, M., Salomon L., Marin-Burgin A. Acquisition of non-olfactory encoding improves odour discrimination in olfactory cortex. Nat Commun 15, 5572 (2024). https://doi.org/10.1038/s41467-024-49897-4
+* Federman, N., Romano, S.A., Amigo-Duran, M., Salomon, L., Marin-Burgin, A. Acquisition of non-olfactory encoding improves odour discrimination in olfactory cortex. Nat Commun 15, 5572 (2024). https://doi.org/10.1038/s41467-024-49897-4
 
 ## Instructions 
 
