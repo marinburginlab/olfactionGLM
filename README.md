@@ -13,7 +13,8 @@ The cross-validation procedure for model selection is inspired by [Hardcastle et
 To test the code, we provide the file piriformData.mat that can be downloaded from [this link](https://figshare.com/articles/dataset/piriformData_mat/25944577). The file piriformData.mat contains data for 182 trials performed by an animal expert in the task. The data consists of the 10-ms time-binned spike count activity for 12 neurons, along with all the other covariates recorded during the task. These covariates (and their labels) are: Position in virtual corridor (X), Odorant stimulation (O), Licking response (L), Inhalation onset (I), Reward consumption (R), Pre-GO time window (G) and Contextual modulation of odor response (M).
 
 ## Reference
-Paper citation LINK
+If you use this repository in your work, please cite:
+* Federman, N., Romano, S.A., Amigo-Duran, M., Salomon L., Marin-Burgin A. Acquisition of non-olfactory encoding improves odour discrimination in olfactory cortex. Nat Commun 15, 5572 (2024). https://doi.org/10.1038/s41467-024-49897-4
 
 ## Instructions 
 
