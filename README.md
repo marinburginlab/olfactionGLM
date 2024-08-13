@@ -1,6 +1,7 @@
 # olfactionGLM
 
 This is the repository for the MATLAB code used to fit GLM models in the paper by [Federman et al., 2024](https://www.nature.com/articles/s41467-024-49897-4).
+Created and mantained by [Sebastián A. Romano](https://github.com/sebromano)
 
 ## Acknowledgements 
 The code is an adaptation of the [neuroGLM](https://github.com/pillowlab/neuroGLM) framework, for regressing trial-based spike train data using a Generalized Linear Model (GLM), introduced by [Park et al., 2014](https://pillowlab.princeton.edu/pubs/abs_ParkI_NN14.html).
