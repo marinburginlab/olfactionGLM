@@ -1,6 +1,7 @@
 # olfactionGLM
 
 This is the repository for the MATLAB code used to fit GLM models in the paper by [Federman et al., 2024](https://www.nature.com/articles/s41467-024-49897-4).
+
 Created and mantained by [Sebastián A. Romano](https://github.com/sebromano)
 
 ## Acknowledgements 
